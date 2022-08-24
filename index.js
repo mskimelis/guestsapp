@@ -43,13 +43,7 @@ document.querySelector("[name='sort-az']").addEventListener("click", () => {
 });
 document.querySelector("[name='sort-za']").addEventListener("click", () => {
   guests.sort(function (a, b) {
-    if (a > b) {
-      return -1;
-    }
-    if (b > a) {
-      return 1;
-    }
-    return 0;
+    return b.localeCompare(a);
   });
   render();
 });
